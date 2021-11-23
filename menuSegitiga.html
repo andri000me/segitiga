@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+	<title>Menu | Web App Triangle</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;		
+		}
+		header {		
+			height: 100px;	
+			background-color: #5837F9;
+			color: #fff;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;			
+		}
+		header img {
+			width: 80px;
+		}
+		#maskot img {
+			width: 120px;
+			background-color: #5837F9;
+			border: 1px solid #000;
+			border-radius: 50%;
+			position: absolute;
+			top: 18%;
+			left: 15%;			
+		}			
+		#maskot p {
+			background-color: #5837F9;
+			color: #fff;
+			position: absolute;
+			top: 20%;
+			left: 25%;
+			font-size: 18px;
+			padding: 15px 30px;
+			border-radius: 10px;
+			border: 2px solid #000;
+		}
+		#opsi {
+			width: 1000px;
+			height: 350px;
+			background-color: #C6BCF2;		
+			position: absolute;
+			top: 40%;
+			left: 13%;
+			text-align: center;
+		}
+		#opsi h2 {
+			color: #180A60;
+			font-size: 22px;
+		}
+		.segitiga {
+			background-color: #5837F9;		
+			padding: 15px;			
+			width: 350px;
+			margin: 10px auto;			
+		}
+		.segitiga a {
+			text-decoration: none;
+			color: #fff;
+			padding: 10px 50px;
+			letter-spacing: 1px;
+		}
+		#btn-kembali {
+			position: absolute;
+			background-color: #5837F9;	
+			padding: 15px 0px;	
+			top: 45%;
+			left: 20%;
+			z-index: 2;			
+		}
+		#btn-kembali a {
+			text-decoration: none;
+			color: #fff;
+			padding: 25px;			
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="img/himalkom.png">
+		<h1>APLIKASI MENGHITUNG SEGITIGA</h1>
+		<img src="img/unri.png">
+	</header>
+	<div id="maskot">
+		<img src="img/maskot.png">		
+		<p>Hai! Ada yang bisa saya bantu?</p>
+	</div>
+	<div id="btn-kembali">
+		<a href="index.html"><i class="fas fa-arrow-left"></i></a>
+	</div>
+	<div id="opsi">
+		<h2>Hitung Luas dan Keliling Segitiga</h2>
+		<div class="segitiga">
+			<a href="cariSegitiga.html">Segitiga Siku-Siku</a>
+		</div>
+		<div class="segitiga">
+			<a href="cariSegitiga.html">Segitiga Sama Sisi</a>
+		</div>
+		<div class="segitiga">
+			<a href="cariSegitiga.html">Segitiga Sama Kaki</a>
+		</div>
+		<div class="segitiga">
+			<a href="cariSegitiga.html">Segitiga Sembarang</a>
+		</div>
+		<div class="segitiga">
+			<a href="cariSegitiga.html">Segitiga Siku-Siku Sama kaki</a>
+		</div>
+	</div>
+</body>
+</html>
