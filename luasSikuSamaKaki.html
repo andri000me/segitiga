@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/icon.png">
+	<title>Cari Luas | Web App Triangle</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;	
+			font-weight: bold;				
+		}
+		header {		
+			height: 100px;	
+			background-color: #5837F9;
+			color: #fff;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;			
+		}
+		header img {
+			width: 80px;
+		}		
+		#konten	{
+			display: flex;
+			justify-content: center;
+		}
+		#konten img {
+			margin-top: 50px;
+			width: 225px;
+		}
+		.masukan {
+			margin: 50px;
+			color: #180A60;
+			font-size: 18px;
+		}
+		.masukan input {
+			padding: 10px 25px 10px 10px;			
+			background-color: #A29C9C38;			
+		}
+		.masuk {			
+			display: inline;
+			width: 100px;
+		}		
+		.masuk2 {
+			margin-right: 15px;
+		}
+		.tombol input {
+			margin-top: 85px;
+			padding: 10px 15px;
+			background-color: #2B06DE;
+			color: #fff;
+			border: 0.5px solid #000;
+		}
+		.btn-hasil {
+			margin-left: 50px;
+		}
+		#hasil {
+			background-color: #C6BCF2;
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			height: 150px;
+		}
+		#hasil p {
+			text-align: center;
+			margin-top: 25px;			
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+		#hasil input {
+			padding: 5px;
+		}		
+	</style>
+</head>
+<body>
+	<header>
+		<img src="img/himalkom.png">
+		<h1>MENGHITUNG LUAS SEGITIGA SIKU-SIKU SAMA KAKI</h1>
+		<img src="img/unri.png">
+	</header>
+	<div id="konten">
+		<div class="gambar">
+			<img src="img/sikuSamaKaki.png">
+		</div>
+		<div class="masukan">
+			<p>Masukan Data</p><br>
+			<div class="input">
+				<label><div class="masuk masuk2">Alas</div>
+					<input id="form" type="text" name="alas"></label><br><br>	
+				<label><div class="masuk">Tinggi</div>
+					<input id="form2" type="text" name="tinggi"></label>
+			</div>
+			<div class="tombol">
+				<input type="button" onclick="location.href='menuSegitiga.html'"; value="Kembali">
+				<input type="button" onclick="reset()" value="Reset">
+				<input class="btn-hasil" onclick="hasil()" type="button" value="Hasil">
+			</div>
+		</div>
+	</div>
+	<div id="hasil">
+		<p>Hasil luas segitiga siku-siku sama kaki <input id="form3" name="hasil"></p>
+	</div>
+</body>
+<script type="text/javascript">
+	function reset() {
+		document.getElementById("form").value = "";
+		document.getElementById("form2").value = "";
+		document.getElementById("form3").value = "";
+	}
+	function hasil() {
+		var nilaiAlas = document.getElementById("form").value;
+		var nilaiTinggi = document.getElementById("form2").value;
+		var hasilNilai = nilaiAlas*nilaiTinggi*1/2;
+
+		document.getElementById("form3").value = hasilNilai; 
+	}
+</script>
+</html>

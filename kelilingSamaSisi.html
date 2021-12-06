@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.png">
+    <title>Cari Keliling | Web App Triangle</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;    
+            font-weight: bold;              
+        }
+        header {        
+            height: 100px;  
+            background-color: #5837F9;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;            
+        }
+        header img {
+            width: 80px;
+        }       
+        #konten {
+            display: flex;
+            justify-content: center;
+        }
+        #konten img {
+            margin-top: 50px;
+            width: 225px;
+        }
+        .masukan {
+            margin: 50px;
+            color: #180A60;
+            font-size: 18px;
+        }
+        .masukan input {
+            padding: 10px 25px 10px 10px;           
+            background-color: #A29C9C38;            
+        }
+        .masuk {            
+            display: inline;
+            width: 100px;
+            margin-right: 20px;            
+        }               
+        .tombol input {
+            margin-top: 85px;
+            padding: 10px 15px;
+            background-color: #2B06DE;
+            color: #fff;
+            border: 0.5px solid #000;
+        }
+        .btn-hasil {
+            margin-left: 50px;
+        }
+        #hasil {
+            background-color: #C6BCF2;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 150px;
+        }
+        #hasil p {
+            text-align: center;
+            margin-top: 25px;           
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        #hasil input {
+            padding: 5px;
+        }       
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/himalkom.png">
+        <h1>MENGHITUNG KELILING SEGITIGA SAMA SISI</h1>
+        <img src="img/unri.png">
+    </header>
+    <div id="konten">
+        <div class="gambar">
+            <img src="img/samaSisi.png">
+        </div>
+        <div class="masukan">
+            <p>Masukan Data</p><br>
+            <div class="input">
+                <label><div class="masuk">Sisi</div>
+                    <input id="form" type="text" name="alas"></label><br><br>
+                <label><div class="masuk">Sisi</div>
+                    <input id="form2" type="text" name="alas"></label><br><br>   
+                <label><div class="masuk">Sisi</div>
+                    <input id="form3" type="text" name="tinggi"></label>
+            </div>
+            <div class="tombol">
+                <input type="button" onclick="location.href='menuSegitiga.html'"; value="Kembali">
+                <input type="button" onclick="reset()" value="Reset">
+                <input class="btn-hasil" onclick="hasil()" type="button" value="Hasil">
+            </div>
+        </div>
+    </div>
+    <div id="hasil">
+        <p>Hasil keliling segitiga sama sisi <input id="form4" name="hasil"></p>
+    </div>
+</body>
+<script type="text/javascript">
+    function reset() {
+        document.getElementById("form").value = "";
+        document.getElementById("form2").value = "";
+        document.getElementById("form3").value = "";
+        document.getElementById("form4").value = "";
+    }
+    function hasil() {
+        var nilaiSisi = parseFloat(document.getElementById("form").value);
+        var nilaiSisi2 = parseFloat(document.getElementById("form2").value);
+        var nilaiSisi3 = parseFloat(document.getElementById("form3").value);
+        var hasilNilai = nilaiSisi+nilaiSisi2+nilaiSisi3;
+
+        document.getElementById("form4").value = hasilNilai; 
+    }
+</script>
+</html>
